@@ -33,7 +33,7 @@ public class Ecole {
 	private int cp;
 	private String ville;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	@JoinTable(name = "Ecole_Professeur",
 				joinColumns = @JoinColumn(name = "idEcole"),
 				inverseJoinColumns = @JoinColumn(name = "idProfesseur"))
@@ -41,4 +41,15 @@ public class Ecole {
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ecole")
 	private List<Etudiant> listeEtudiant;
+
+	public Ecole(int id, String nom, String adresse, int cp, String ville) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.adresse = adresse;
+		this.cp = cp;
+		this.ville = ville;
+	}
+	
+	
 }

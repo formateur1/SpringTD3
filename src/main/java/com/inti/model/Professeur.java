@@ -31,16 +31,26 @@ public class Professeur {
 	private String prenom;
 	private double salaire;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	@JoinTable(name = "Professeur_Etudiant",
 				joinColumns = @JoinColumn(name = "idProfesseur"),
 				inverseJoinColumns = @JoinColumn(name = "idEtudiant"))
 	private List<Etudiant> listeEtudiant;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	@JoinTable(name = "Ecole_Professeur",
 				joinColumns = @JoinColumn(name = "idProfesseur"),
 				inverseJoinColumns = @JoinColumn(name = "idEcole"))
 	private List<Ecole> listeEcole;
+
+	public Professeur(int id, String nom, String prenom, double salaire) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.salaire = salaire;
+	}
+	
+	
 
 }

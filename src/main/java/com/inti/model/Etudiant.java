@@ -44,4 +44,16 @@ public class Etudiant {
 	@JoinColumn(name = "idEcole")
 	private Ecole ecole;
 
+	public Etudiant(int id, String nom, String prenom, String email, String telephone, int anneeEtude) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+		this.anneeEtude = anneeEtude;
+	}
+	
+	
+
 }
