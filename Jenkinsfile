@@ -10,13 +10,13 @@ pipeline {
         stage('Clean') {
             steps {
                 
-                bat "rmdir SpringTD3 /s /q"
+         
                 
                 bat "git clone https://github.com/formateur1/SpringTD3.git"
 
-                dir('SpringTD3') {
+                //dir('SpringTD3') {
                     bat "mvn clean"
-                }
+                //}
                 
             }
         }
