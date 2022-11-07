@@ -10,9 +10,9 @@ pipeline {
         stage('Clean') {
             steps {
 
-                //dir('SpringTD3') {
+                dir('SpringTD3') {
                     bat "mvn clean"
-                //}
+                }
                 
             }
         }
