@@ -51,6 +51,5 @@ public class Ecole {
 		this.ville = ville;
 	}
 	
-	// commentaire pour lancer jenkins !
 	
 }
